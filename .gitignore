@@ -55,6 +55,9 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
+# Large Image files
+*.exr
+
 # Crashlytics generated file
 crashlytics-build.properties
 
