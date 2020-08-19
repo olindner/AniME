@@ -196,6 +196,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HandSphere
       objectReference: {fileID: 0}
+    - target: {fileID: 4805319657468388515, guid: e3016ebf16559424c928ed699e3464a6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8138847610006164568, guid: e3016ebf16559424c928ed699e3464a6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -762,6 +766,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1275480647}
     m_Modifications:
+    - target: {fileID: 282450350, guid: dd3415963d7dc484bb06415afea3b1e7, type: 3}
+      propertyPath: EarthBending
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 282450350, guid: dd3415963d7dc484bb06415afea3b1e7, type: 3}
+      propertyPath: earthWall
+      value: 
+      objectReference: {fileID: 5549811582539169479, guid: 3b4af582a89e3714f8b766e61b771c58, type: 3}
+    - target: {fileID: 282450350, guid: dd3415963d7dc484bb06415afea3b1e7, type: 3}
+      propertyPath: earthBending
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2318761953878701001, guid: dd3415963d7dc484bb06415afea3b1e7, type: 3}
       propertyPath: ShapeModule.m_Position.z
       value: 3
