@@ -778,6 +778,10 @@ PrefabInstance:
       propertyPath: earthBending
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 282450350, guid: dd3415963d7dc484bb06415afea3b1e7, type: 3}
+      propertyPath: xrRig
+      value: 
+      objectReference: {fileID: 1096383979}
     - target: {fileID: 2318761953878701001, guid: dd3415963d7dc484bb06415afea3b1e7, type: 3}
       propertyPath: ShapeModule.m_Position.z
       value: 3

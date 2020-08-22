@@ -12,6 +12,7 @@ public class BendingController : MonoBehaviour
     public bool fireBending = false;
     public GameObject earthWall;
     public float bendingCooldown = 1f;
+    public GameObject xrRig;
 
     private XRGrabInteractable grabbable;
     private List<InputDevice> rightHandDevice = new List<InputDevice>();
@@ -27,7 +28,7 @@ public class BendingController : MonoBehaviour
 
     void Update()
     {
-        if (currentlyBending) return;
+        if (currentlyBending || xrRig == null) return;
 
         CheckForAirBending();
         CheckForWaterBending();
@@ -51,8 +52,10 @@ public class BendingController : MonoBehaviour
         {
             currentlyBending = true;
             GameObject instantiatedWall = 
-                Instantiate(earthWall, transform.position + Vector3.forward * 3f + Vector3.up * 0.25f, transform.rotation);
+                Instantiate(earthWall, xrRig.transform.position + Vector3.forward * 3f + Vector3.up * 0.5f, Quaternion.identity);
             StartCoroutine(BendingDelay());
+            instantiatedWall.GetComponent<Rigidbody>().AddForce(xrRig.transform.forward * 3000f);
+            Destroy(instantiatedWall, 3f);
         }
     }
 
