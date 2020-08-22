@@ -6,10 +6,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class BendingController : MonoBehaviour
 {
-    public bool airBending = false;
-    public bool waterBending = false;
-    public bool earthBending = false;
-    public bool fireBending = false;
     public GameObject earthWall;
     public float bendingCooldown = 1f;
     public GameObject xrRig;
@@ -47,7 +43,7 @@ public class BendingController : MonoBehaviour
     private void CheckForEarthBending()
     {
         bool triggerValue;
-        if (rightHandDevice.Count > 0 && earthBending &&
+        if (rightHandDevice.Count > 0 && UserState.Instance.bendingState == BendingState.EarthBending &&
             rightHandDevice[0].TryGetFeatureValue(CommonUsages.triggerButton, out triggerValue) && triggerValue)
         {
             currentlyBending = true;
@@ -62,7 +58,7 @@ public class BendingController : MonoBehaviour
     private void CheckForFireBending()
     {
         bool triggerValue;
-        if (rightHandDevice.Count > 0 && fireBending &&
+        if (rightHandDevice.Count > 0 && UserState.Instance.bendingState == BendingState.FireBending &&
             rightHandDevice[0].TryGetFeatureValue(CommonUsages.triggerButton, out triggerValue) && triggerValue)
         {
             particleSystem.Play();
